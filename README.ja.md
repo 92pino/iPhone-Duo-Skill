@@ -23,7 +23,30 @@
 
 ## インストール
 
-リポジトリのルートで実行します。同名のスキルがある場合は上書きせずに停止します。
+`npx skills` で本リポジトリのスキルを確認・インストールできます。
+
+```sh
+# インストール可能なスキルを確認
+npx skills add 92pino/iPhone-Duo-Skill --list
+
+# スキルを指定してインストール
+npx skills add 92pino/iPhone-Duo-Skill --skill iphone-duo
+npx skills add 92pino/iPhone-Duo-Skill --skill ios-27-migration
+```
+
+Codex に2つのスキルをグローバルインストールする場合:
+
+```sh
+npx skills add 92pino/iPhone-Duo-Skill \
+  --skill iphone-duo \
+  --skill ios-27-migration \
+  --agent codex \
+  --global
+```
+
+### 手動インストール
+
+本リポジトリをダウンロード済みの場合はルートで実行します。同名のスキルがある場合は上書きせずに停止します。
 
 ```sh
 skill_root="${CODEX_HOME:-$HOME/.codex}/skills"
@@ -35,9 +58,9 @@ else
 fi
 ```
 
-Claude Code では同じ `skills/iphone-duo` フォルダをプロジェクトの `.claude/skills/` にコピーできます。参照資料、翻訳、`LICENSE.upstream` も一緒に保持してください。
+もう一方のスキルは `iphone-duo` を `ios-27-migration` に置き換えてください。Claude Code では選択したスキルフォルダをプロジェクトの `.claude/skills/` にコピーできます。参照資料と翻訳も一緒に保持してください。
 
-iOS 27 スキルは新機能を追加せず、既存動作の維持に集中します。インストールは上のコマンドの `iphone-duo` を `ios-27-migration` に置き換えて実行してください。各スキルは独立してインストールできます。
+iOS 27 スキルは新機能を追加せず、既存動作の維持に集中します。各スキルは独立してインストールできます。
 
 ## 使用例
 

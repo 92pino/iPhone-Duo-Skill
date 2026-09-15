@@ -25,7 +25,30 @@
 
 ## 설치
 
-이 저장소 루트에서 아래 명령을 실행합니다. 같은 이름의 스킬이 있으면 덮어쓰지 않고 중단합니다.
+`npx skills`로 저장소에 포함된 스킬을 확인하거나 설치할 수 있습니다.
+
+```sh
+# 설치 가능한 스킬 확인
+npx skills add 92pino/iPhone-Duo-Skill --list
+
+# 원하는 스킬 설치
+npx skills add 92pino/iPhone-Duo-Skill --skill iphone-duo
+npx skills add 92pino/iPhone-Duo-Skill --skill ios-27-migration
+```
+
+Codex에 전역으로 두 스킬을 설치하려면 다음과 같이 실행합니다.
+
+```sh
+npx skills add 92pino/iPhone-Duo-Skill \
+  --skill iphone-duo \
+  --skill ios-27-migration \
+  --agent codex \
+  --global
+```
+
+### 수동 설치
+
+이 저장소를 내려받은 상태라면 루트에서 아래 명령을 실행할 수 있습니다. 같은 이름의 스킬이 있으면 덮어쓰지 않고 중단합니다.
 
 ```sh
 skill_root="${CODEX_HOME:-$HOME/.codex}/skills"
@@ -37,9 +60,9 @@ else
 fi
 ```
 
-Claude Code에서는 동일한 `skills/iphone-duo` 폴더를 해당 프로젝트의 `.claude/skills/` 아래에 복사할 수 있습니다. 설치 시 스킬 폴더 안의 참조와 `LICENSE.upstream`도 함께 유지하세요.
+다른 스킬을 수동 설치하려면 명령의 `iphone-duo`를 `ios-27-migration`으로 바꾸세요. Claude Code에서는 선택한 스킬 폴더를 프로젝트의 `.claude/skills/` 아래에 복사할 수 있습니다. 참조와 번역 파일도 함께 유지하세요.
 
-iOS 27 스킬은 신규 기능 도입 없이 기존 동작 보존에 집중합니다. 설치는 위 명령에서 `iphone-duo`를 `ios-27-migration`으로 바꿔 실행하세요. 두 스킬은 각각 설치할 수 있습니다.
+iOS 27 스킬은 신규 기능 도입 없이 기존 동작 보존에 집중합니다. 두 스킬은 각각 설치할 수 있습니다.
 
 ## 사용 예시
 

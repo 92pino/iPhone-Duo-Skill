@@ -24,7 +24,30 @@ Read the [English skill guide](skills/iphone-duo/SKILL.en.md). The single discov
 
 ## Installation
 
-Run these commands from the repository root. If a skill with the same name exists, the commands stop without overwriting it.
+Use `npx skills` to list or install the skills in this repository.
+
+```sh
+# List available skills
+npx skills add 92pino/iPhone-Duo-Skill --list
+
+# Install a specific skill
+npx skills add 92pino/iPhone-Duo-Skill --skill iphone-duo
+npx skills add 92pino/iPhone-Duo-Skill --skill ios-27-migration
+```
+
+To install both skills globally for Codex:
+
+```sh
+npx skills add 92pino/iPhone-Duo-Skill \
+  --skill iphone-duo \
+  --skill ios-27-migration \
+  --agent codex \
+  --global
+```
+
+### Manual installation
+
+If you have downloaded this repository, run these commands from its root. If a skill with the same name exists, the commands stop without overwriting it.
 
 ```sh
 skill_root="${CODEX_HOME:-$HOME/.codex}/skills"
@@ -36,9 +59,9 @@ else
 fi
 ```
 
-For Claude Code, copy the same `skills/iphone-duo` directory into the project's `.claude/skills/` directory. Keep all references, translations, and `LICENSE.upstream` when installing.
+For the other skill, replace `iphone-duo` with `ios-27-migration`. For Claude Code, copy the selected skill directory into the project's `.claude/skills/` directory. Keep its references and translations when installing.
 
-The iOS 27 skill focuses on preserving existing behavior without adding new features. To install it, replace `iphone-duo` with `ios-27-migration` in the command above. Install either skill independently.
+The iOS 27 skill focuses on preserving existing behavior without adding new features. Install either skill independently.
 
 ## Example requests
 
