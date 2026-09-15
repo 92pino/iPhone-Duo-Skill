@@ -2,9 +2,9 @@
 
 [한국어](README.md) | English | [日本語](README.ja.md)
 
-![Concept render of a foldable iPhone-like device in closed, partially folded, and open poses](assets/iphone-duo-poses.png)
+![Concept render of a foldable iPhone Duo showing a Mail draft alongside the Photos library in split-screen](assets/iphone-duo-hero.jpg)
 
-An original concept render to illustrate device poses; it is not an actual product photo or precise hardware drawing.
+An original concept render illustrating side-by-side Mail and Photos use; it is not an actual product photo or precise hardware drawing.
 
 An iOS development skill available in Korean, English, and Japanese. It guides inspection, implementation, and validation of iPhone Duo adaptations in SwiftUI and UIKit apps.
 
