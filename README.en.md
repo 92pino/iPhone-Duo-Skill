@@ -5,6 +5,13 @@
 
 An iOS development skill available in Korean, English, and Japanese. It guides inspection, implementation, and validation of iPhone Duo adaptations in SwiftUI and UIKit apps.
 
+## Included skills
+
+| Skill | Scope |
+|---|---|
+| [iphone-duo](skills/iphone-duo/SKILL.en.md) | Duo folding, layouts, multiple displays, and cameras |
+| [ios-27-migration](skills/ios-27-migration/SKILL.en.md) | iOS 27 change mapping, update installation, dependency checks, fixes, and validation |
+
 ## Improvements
 
 - Verify APIs against the installed SDK and preserve fallbacks for older OS versions.
@@ -31,9 +38,12 @@ fi
 
 For Claude Code, copy the same `skills/iphone-duo` directory into the project's `.claude/skills/` directory. Keep all references, translations, and `LICENSE.upstream` when installing.
 
+The iOS 27 skill focuses on preserving existing behavior without adding new features. To install it, replace `iphone-duo` with `ios-27-migration` in the command above. Install either skill independently.
+
 ## Example requests
 
 ```text
+$ios-27-migration Inspect this app for iOS 27 compatibility, fix verified problems, and validate the changes.
 $iphone-duo Adapt this app for Duo. Implement what the installed SDK supports and verify the changes.
 $iphone-duo Check that the detail screen and draft input survive folding and unfolding.
 $iphone-duo Fix camera switching, mirroring, and recording continuity in this camera screen.

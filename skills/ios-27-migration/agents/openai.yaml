@@ -1,0 +1,4 @@
+interface:
+  display_name: "iOS 27 Migration"
+  short_description: "Audit and fix existing apps for iOS 27 compatibility"
+  default_prompt: "Use $ios-27-migration to inspect this app for iOS 27 compatibility, fix verified regressions, and validate existing user flows while preserving older OS support."

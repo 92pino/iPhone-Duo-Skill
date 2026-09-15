@@ -4,6 +4,13 @@
 
 한국어·영어·일본어로 제공하는 iOS 개발 스킬입니다. SwiftUI와 UIKit 앱의 Duo 대응을 점검하고 구현·검증하도록 안내합니다.
 
+## 포함된 스킬
+
+| 스킬 | 범위 |
+|---|---|
+| [iphone-duo](skills/iphone-duo/SKILL.md) | Duo 개폐·레이아웃·다중 화면·카메라 |
+| [ios-27-migration](skills/ios-27-migration/SKILL.md) | iOS 27 변경 매핑·업데이트 설치·의존성 점검 및 수정·검증 |
+
 ## 보완한 내용
 
 - 실제 SDK에서 확인한 API만 구현하고 구 OS 대체 동작 유지
@@ -32,9 +39,12 @@ fi
 
 Claude Code에서는 동일한 `skills/iphone-duo` 폴더를 해당 프로젝트의 `.claude/skills/` 아래에 복사할 수 있습니다. 설치 시 스킬 폴더 안의 참조와 `LICENSE.upstream`도 함께 유지하세요.
 
+iOS 27 스킬은 신규 기능 도입 없이 기존 동작 보존에 집중합니다. 설치는 위 명령에서 `iphone-duo`를 `ios-27-migration`으로 바꿔 실행하세요. 두 스킬은 각각 설치할 수 있습니다.
+
 ## 사용 예시
 
 ```text
+$ios-27-migration 이 앱의 iOS 27 호환성을 점검하고 확인된 문제를 수정·검증해줘.
 $iphone-duo 이 앱을 Duo에 대응해줘. 현재 SDK에서 가능한 수정부터 하고 검증해줘.
 $iphone-duo 접고 펼칠 때 상세 화면과 입력 내용이 유지되는지 점검해줘.
 $iphone-duo 카메라 화면의 전환·미러링·녹화 유지 문제를 수정해줘.
