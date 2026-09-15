@@ -2,8 +2,17 @@
 
 [한국어](README.md) | English | [日本語](README.ja.md)
 
+![Concept render of a foldable iPhone-like device in closed, partially folded, and open poses](assets/iphone-duo-poses.png)
+
+An original concept render to illustrate device poses; it is not an actual product photo or precise hardware drawing.
 
 An iOS development skill available in Korean, English, and Japanese. It guides inspection, implementation, and validation of iPhone Duo adaptations in SwiftUI and UIKit apps.
+
+## What actually matters on this device
+
+![Diagram connecting closed, partially folded, and open poses to available space, fold avoidance, expanded layout, and preserved user state](assets/what-matters.svg)
+
+As the pose changes, so does the space available to the app. Lay out content from the current view or scene size and safe areas. Use reserved-region APIs only when needed and after confirming them in the installed SDK. Keep drafts, selection, and playback position across transitions. This conceptual diagram summarizes [Apple's Duo developer material](https://developer.apple.com/iphone-duo/).
 
 ## Included skills
 
@@ -28,17 +37,17 @@ Use `npx skills` to list or install the skills in this repository.
 
 ```sh
 # List available skills
-npx skills add 92pino/iPhone-Duo-Skill --list
+npx skills add DamDamStudio/iPhone-Duo-Skill --list
 
 # Install a specific skill
-npx skills add 92pino/iPhone-Duo-Skill --skill iphone-duo
-npx skills add 92pino/iPhone-Duo-Skill --skill ios-27-migration
+npx skills add DamDamStudio/iPhone-Duo-Skill --skill iphone-duo
+npx skills add DamDamStudio/iPhone-Duo-Skill --skill ios-27-migration
 ```
 
 To install both skills globally for Codex:
 
 ```sh
-npx skills add 92pino/iPhone-Duo-Skill \
+npx skills add DamDamStudio/iPhone-Duo-Skill \
   --skill iphone-duo \
   --skill ios-27-migration \
   --agent codex \

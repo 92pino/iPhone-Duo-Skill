@@ -2,7 +2,17 @@
 
 한국어 | [English](README.en.md) | [日本語](README.ja.md)
 
+![닫힘, 부분 접힘, 펼침 상태의 폴더블 iPhone 콘셉트 렌더](assets/iphone-duo-poses.png)
+
+개폐 상태를 보여주는 독자 제작 콘셉트 이미지입니다. 실제 제품 사진이나 정확한 하드웨어 도면은 아닙니다.
+
 한국어·영어·일본어로 제공하는 iOS 개발 스킬입니다. SwiftUI와 UIKit 앱의 Duo 대응을 점검하고 구현·검증하도록 안내합니다.
+
+## 이 기기에서 실제로 중요한 것
+
+![닫힘에는 좁은 현재 영역에 맞추고, 부분 접힘에는 힌지 영역을 피하며, 펼침에는 여유 공간을 활용하면서 사용자 상태를 유지하는 관계도](assets/what-matters.svg)
+
+자세가 바뀌면 앱이 사용할 수 있는 공간도 달라집니다. 현재 view/scene의 크기와 safe area를 기준으로 레이아웃을 정하고, 필요할 때만 SDK에서 확인한 reserved-region API로 접힘·가림 영역을 처리합니다. 개폐 중에도 입력 초안, 선택, 재생 위치를 유지합니다. [Apple의 Duo 개발자 자료](https://developer.apple.com/iphone-duo/)를 바탕으로 그린 개념도입니다.
 
 ## 포함된 스킬
 
@@ -29,17 +39,17 @@
 
 ```sh
 # 설치 가능한 스킬 확인
-npx skills add 92pino/iPhone-Duo-Skill --list
+npx skills add DamDamStudio/iPhone-Duo-Skill --list
 
 # 원하는 스킬 설치
-npx skills add 92pino/iPhone-Duo-Skill --skill iphone-duo
-npx skills add 92pino/iPhone-Duo-Skill --skill ios-27-migration
+npx skills add DamDamStudio/iPhone-Duo-Skill --skill iphone-duo
+npx skills add DamDamStudio/iPhone-Duo-Skill --skill ios-27-migration
 ```
 
 Codex에 전역으로 두 스킬을 설치하려면 다음과 같이 실행합니다.
 
 ```sh
-npx skills add 92pino/iPhone-Duo-Skill \
+npx skills add DamDamStudio/iPhone-Duo-Skill \
   --skill iphone-duo \
   --skill ios-27-migration \
   --agent codex \

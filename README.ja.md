@@ -2,7 +2,17 @@
 
 [한국어](README.md) | [English](README.en.md) | 日本語
 
+![閉じた状態・部分的に折った状態・開いた状態のフォルダブル iPhone のコンセプトレンダー](assets/iphone-duo-poses.png)
+
+開閉状態を示す独自制作のコンセプト画像です。実製品の写真や正確なハードウェア図面ではありません。
+
 韓国語・英語・日本語で提供する iOS 開発スキルです。SwiftUI と UIKit アプリの Duo 対応について、調査・実装・検証を支援します。
+
+## この機器で実際に重要なこと
+
+![閉じた状態は現在の狭い領域に合わせ、部分的な折り曲げではヒンジを避け、開いた状態は広い空間を活用し、ユーザー状態を保持する図](assets/what-matters.svg)
+
+姿勢が変わるとアプリの利用可能な空間も変わります。現在の view/scene のサイズと safe area を基準に配置し、必要な場合だけ SDK で確認した reserved-region API で折り目・遮蔽領域を扱います。開閉中も下書き、選択、再生位置を保持します。この概念図は [Apple の Duo 開発者資料](https://developer.apple.com/iphone-duo/)をもとに作成しました。
 
 ## 収録スキル
 
@@ -27,17 +37,17 @@
 
 ```sh
 # インストール可能なスキルを確認
-npx skills add 92pino/iPhone-Duo-Skill --list
+npx skills add DamDamStudio/iPhone-Duo-Skill --list
 
 # スキルを指定してインストール
-npx skills add 92pino/iPhone-Duo-Skill --skill iphone-duo
-npx skills add 92pino/iPhone-Duo-Skill --skill ios-27-migration
+npx skills add DamDamStudio/iPhone-Duo-Skill --skill iphone-duo
+npx skills add DamDamStudio/iPhone-Duo-Skill --skill ios-27-migration
 ```
 
 Codex に2つのスキルをグローバルインストールする場合:
 
 ```sh
-npx skills add 92pino/iPhone-Duo-Skill \
+npx skills add DamDamStudio/iPhone-Duo-Skill \
   --skill iphone-duo \
   --skill ios-27-migration \
   --agent codex \
