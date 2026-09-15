@@ -1,0 +1,4 @@
+interface:
+  display_name: "iPhone Duo"
+  short_description: "iPhone Duo 대응 구현과 레이아웃·상태·카메라 검증"
+  default_prompt: "Use $iphone-duo to inspect this iOS app and implement iPhone Duo adaptations supported by the installed SDK, preserving existing behavior and verifying the changes."
