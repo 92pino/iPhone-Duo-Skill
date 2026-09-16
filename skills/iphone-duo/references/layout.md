@@ -20,6 +20,8 @@ rg -n --glob '*.swift' 'UIScreen\.main|userInterfaceIdiom|UIDevice\.current\.ori
 
 원본의 reserved regions는 분할 영역과 가림 영역을 구별한다. 사용할 때 [SDK 확인](compatibility.md)을 거치고 좌표계, 활성 상태, 변경 알림을 확인한다. 안전 영역만으로 접힘 영역을 모두 표현한다고 가정하지 않는다.
 
+HIG가 정의하는 reserved regions는 세 가지다. 외부 전면 카메라 영역은 항상 존재하며 Live Activities가 있으면 Dynamic Island로 확장된다. 내부 전면 카메라 영역은 카메라가 켜져 있을 때만 존재하고, 꺼져 있으면 보이지 않다가 켜지는 순간 UI가 비켜난다. 접힘 영역은 부분 접힘 상태에서만 조건부로 나타나며 힌지 중앙 영역을 제외하고 내부 디스플레이를 나눈다. alert·context menu·sheet 같은 표준 컴포넌트는 이 영역들에 자동으로 대응하므로, 커스텀 컴포넌트에만 reserved region API 적용 여부를 판단한다.
+
 주 내용과 보조 내용이 모두 보여야 하면 split, 앞뒤 관계가 있으면 overlay를 검토한다. `ArrangementView`를 도입할 때 공식 세션의 중첩 제약을 확인한다. 원본은 navigation container를 arrangement 바깥에 두고, arrangement를 `List`/`ScrollView` 안에 넣지 않도록 안내한다.
 
 스크롤 중인 글이나 피드를 접힘마다 다른 영역으로 옮기지 않는다. 그리드의 짝수 열은 대칭 분할이 실제로 유용할 때만 고려하며 좁은 폭·큰 글자에서 강제하지 않는다. 힌지 각도만으로 레이아웃을 계산하지 않는다.

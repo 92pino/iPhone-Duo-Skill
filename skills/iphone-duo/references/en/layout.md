@@ -21,6 +21,8 @@ rg -n --glob '*.swift' 'UIScreen\.main|userInterfaceIdiom|UIDevice\.current\.ori
 
 The upstream reserved-region guidance distinguishes division regions from occlusion regions. Perform [SDK verification](compatibility.md) before using these APIs, and check coordinate spaces, active state, and change notifications. Do not assume safe areas represent every fold region.
 
+The HIG defines three reserved regions. The outer front-facing camera region is always present and expands into the Dynamic Island when Live Activities are shown. The inner front-facing camera region exists only while the camera is active: it stays invisible when off and the UI moves aside the moment it turns on. The folding region appears only while the device is partially open, dividing the inner display and excluding the center hinge area. Standard components like alerts, context menus, and sheets already adapt to these regions automatically, so decide on reserved-region APIs only for custom components.
+
 Consider split when primary and secondary content must both remain visible, and overlay when content has a foreground/background relationship. Check the official session's nesting constraints before adopting `ArrangementView`. The upstream guide places navigation containers outside arrangements and advises against putting arrangements inside `List` or `ScrollView`.
 
 Do not move a scrolling article or feed between regions on every fold. Consider even grid column counts only when symmetrical division is useful, and do not force them at narrow widths or large text sizes. Do not calculate layouts solely from hinge angles.

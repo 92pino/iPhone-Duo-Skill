@@ -20,6 +20,8 @@ rg -n --glob '*.swift' 'UIScreen\.main|userInterfaceIdiom|UIDevice\.current\.ori
 
 原版の reserved regions は分割領域と遮蔽領域を区別します。[SDK 確認](compatibility.md)後に使用し、座標系、有効状態、変更通知を確認します。safe area だけで全ての折り目領域を表せるとは仮定しません。
 
+HIG が定義する reserved regions は 3 つです。外側の前面カメラ領域は常に存在し、Live Activities があると Dynamic Island に拡張します。内側の前面カメラ領域はカメラが有効なときだけ存在し、無効時は見えず、有効化した瞬間に UI が避けます。折り目領域は部分的に開いた状態でのみ条件付きで現れ、ヒンジ中央部分を除いて内側ディスプレイを分割します。alert・context menu・sheet などの標準コンポーネントはこれらの領域に自動対応するため、reserved region API の適用はカスタムコンポーネントに限って判断します。
+
 主内容と補助内容を両方表示するなら split、前後関係があるなら overlay を検討します。`ArrangementView` 導入時は公式セッションの入れ子制約を確認します。原版では navigation container を arrangement の外に置き、arrangement を `List`/`ScrollView` の中に置かないよう案内しています。
 
 スクロール中の記事やフィードを開閉のたびに別の領域へ移動させません。グリッドの偶数列は対称分割が有効な場合だけ検討し、狭い幅や大きい文字で強制しません。ヒンジ角度だけでレイアウトを計算しません。

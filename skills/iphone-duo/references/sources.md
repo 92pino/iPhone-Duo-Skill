@@ -2,7 +2,7 @@
 
 한국어 | [English](en/sources.md) | [日本語](ja/sources.md)
 
-확인일: 2026-09-15. 버전·API는 작업 시점에 다시 확인한다.
+확인일: 2026-09-16. 버전·API는 작업 시점에 다시 확인한다.
 
 ## 기반 저장소
 
@@ -20,7 +20,7 @@
 - [Design for iPhone Duo](https://developer.apple.com/videos/play/tech-talks/111466/)
 - [Designing for iPhone Duo — HIG](https://developer.apple.com/design/human-interface-guidelines/designing-for-iphone-duo)
 
-공식 안내와 세션 페이지의 존재·주제를 확인했다. HIG는 링크만 확인했으며 본문 검증은 하지 못했다. 모든 API 시그니처와 Duo runtime 동작을 검증했다는 의미는 아니다. 설치된 Xcode 26.4.1 / iOS SDK 26.4에서는 Duo 신기능 컴파일·실행 검증을 수행하지 않았다.
+공식 안내와 세션 페이지의 존재·주제를 확인했다. 2026-09-16에 HIG 본문 전체를 읽고 reserved regions(외부/내부 카메라, 접힘 영역) 정의, 세로 바를 유지하는 내부 디스플레이 세로 방향 예외, Split View 멀티태스킹의 컨트롤 배치, arrangement view의 split/overlay 구분을 확인해 [레이아웃](layout.md)과 [바](bars.md)에 반영했다. 이는 HIG 문서에 적힌 디자인 가이드라인 확인이며, 모든 API 시그니처와 Duo runtime 동작을 검증했다는 의미는 아니다. 설치된 Xcode 26.4.1 / iOS SDK 26.4에서는 Duo 신기능 컴파일·실행 검증을 수행하지 않았다.
 
 ## 이 배포판의 추가 기준
 

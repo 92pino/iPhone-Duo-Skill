@@ -2,7 +2,7 @@
 
 [한국어](../sources.md) | [English](../en/sources.md) | 日本語
 
-確認日: 2026-09-15。バージョンと API は作業時点で再確認します。
+確認日: 2026-09-16。バージョンと API は作業時点で再確認します。
 
 ## 基盤リポジトリ
 
@@ -20,7 +20,7 @@
 - [Design for iPhone Duo](https://developer.apple.com/videos/play/tech-talks/111466/)
 - [Designing for iPhone Duo — HIG](https://developer.apple.com/design/human-interface-guidelines/designing-for-iphone-duo)
 
-公式案内とセッションページの存在・主題を確認しました。HIG はリンクのみ確認し、本文は検証できていません。全 API シグネチャや Duo runtime の動作を検証したという意味ではありません。インストール済み Xcode 26.4.1 / iOS SDK 26.4 では、Duo 新機能のコンパイル・実行検証は行っていません。
+公式案内とセッションページの存在・主題を確認しました。2026-09-16 に HIG 本文全体を読み、reserved regions(外側/内側カメラ、折り目領域)の定義、内側ディスプレイが縦向きのときに横バーを維持する例外、Split View マルチタスキングのコントロール配置、arrangement view の split/overlay の区別を確認し、[レイアウト](layout.md)と[バー](bars.md)に反映しました。これは HIG 文書に書かれたデザインガイドラインの確認であり、全 API シグネチャや Duo runtime の動作を検証したという意味ではありません。インストール済み Xcode 26.4.1 / iOS SDK 26.4 では、Duo 新機能のコンパイル・実行検証は行っていません。
 
 ## この版で追加した基準
 

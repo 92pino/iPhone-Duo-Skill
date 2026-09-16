@@ -3,7 +3,7 @@
 [한국어](../sources.md) | English | [日本語](../ja/sources.md)
 
 
-Checked on September 15, 2026. Recheck versions and APIs when performing a task.
+Checked on September 16, 2026. Recheck versions and APIs when performing a task.
 
 ## Upstream repository
 
@@ -21,7 +21,7 @@ Adapted into Korean, English, and Japanese using the upstream topic organization
 - [Design for iPhone Duo](https://developer.apple.com/videos/play/tech-talks/111466/)
 - [Designing for iPhone Duo — HIG](https://developer.apple.com/design/human-interface-guidelines/designing-for-iphone-duo)
 
-The official announcement and the existence and topics of session pages were checked. Only the HIG link was checked; its body was not verified. This does not mean every API signature or Duo runtime behavior was verified. Compilation and execution of new Duo features were not validated with the installed Xcode 26.4.1 / iOS SDK 26.4.
+The official announcement and the existence and topics of session pages were checked. On September 16, 2026, the full HIG body was read and its definitions for reserved regions (outer/inner camera, folding region), the inner-display-portrait exception that keeps horizontal bars, Split View multitasking control placement, and the split/overlay distinction for arrangement views were confirmed and folded into [Layout](layout.md) and [Bars](bars.md). This reflects the design guidance written in the HIG document; it does not mean every API signature or Duo runtime behavior was verified. Compilation and execution of new Duo features were not validated with the installed Xcode 26.4.1 / iOS SDK 26.4.
 
 ## Additional guidance in this edition
 
